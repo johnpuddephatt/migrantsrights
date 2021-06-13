@@ -173,6 +173,14 @@ hr.is-style-wide,
           clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
 }
 
+.wp-block-media-text {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+}
+.wp-block-media-text .wp-block-media-text__content {
+  padding: 0 8% 0 8%;
+}
+
 .block-editor-block-list__layout{
   font-family: Montserrat, ui-sans-serif, system-ui !important;
   font-size: 1.125rem !important;

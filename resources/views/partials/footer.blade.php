@@ -66,11 +66,11 @@
         <span class="ml-1 text-xl">{{ $siteName }}</span>
       </a>
       <p class="mt-4 text-sm text-gray-400 sm:ml-6 sm:mt-1">{{ $siteStrapline }} © 2020</p>
-      <span class="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start">
-
-        <x-button
-          href="https://migrantsrights.us2.list-manage.com/subscribe/post?u=d9e512af0e78ae1205ef2bef5&id=a6e14e9a98">
-          Join our newsletter</x-button>
+      <span class="inline-flex items-center justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start">
+        <a target="_blank"
+          href="https://migrantsrights.us2.list-manage.com/subscribe/post?u=d9e512af0e78ae1205ef2bef5&id=a6e14e9a98"
+          class="inline-flex px-3 py-1 font-bold text-gray-300 border-2 border-gray-200 text-md hover:text-white focus:outline-none hover:border-white">Join
+          our newsletter</a>
 
         @if(get_theme_mod('facebook'))
         <a class="ml-3 text-gray-300 hover:text-white" aria-label="Facebook link" href="{{ get_theme_mod('facebook') }}"
