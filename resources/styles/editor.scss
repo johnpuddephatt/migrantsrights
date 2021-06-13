@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
+@import 'common/global';
+
+.block-editor-block-list__layout {
+  @apply font-body text-lg antialiased #{!important};
+}
+
+.wp-block {
+  @apply max-w-screen-md;
+
+  &.editor-post-title__block .editor-post-title__input {
+    @apply font-body font-extrabold text-6xl #{!important};
+  }
+}

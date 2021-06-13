@@ -1,0 +1,139 @@
+body {
+  @apply font-body;
+}
+
+.brand {
+  @apply text-3xl font-medium text-indigo-500;
+}
+
+#ez-toc-container {
+  .single-project & {
+    .ez-toc-title {
+      display: none;
+    }
+  }
+  .ez-toc-title {
+    @apply text-2xl;
+  }
+
+  li {
+    @apply mb-4 text-gray-600;
+  }
+}
+
+.ez-toc-title {
+  @apply text-xl font-bold mb-4;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+.nav-links {
+  @apply mt-8 flex justify-between;
+}
+
+.nav-previous,
+.nav-next {
+  @apply inline-flex px-6 py-2 text-lg text-white bg-violet-500 border-0 rounded focus:outline-none hover:bg-violet-600;
+}
+
+.clip-hexagon {
+  clip-path: polygon(28% 1%, 100% 4%, 100% 100%, 11% 86%, 0 34%);
+}
+
+.clip-pentagon {
+  clip-path: polygon(85% 0%, 100% 65%, 45% 100%, 0% 55%, 5% 10%);
+}
+
+.clip-bottom-slant {
+  clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% calc(100% - 10vw));
+}
+
+.clip-top-slant {
+  clip-path: polygon(0% 6vw, 100% 0, 100% 100%, 0 100%);
+  padding-top: 6vw;
+  margin-bottom: -1px;
+}
+
+.clip-top-right-corner {
+  position: relative;
+  &::before {
+    content: '';
+    height: 12em;
+    width: 20em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 6em solid transparent;
+    border-left-width: 10em;
+    border-top: 6em solid white;
+    border-right: 10em solid white;
+  }
+}
+
+.clip-project-header {
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - 15vw) 0%,
+    100% 12.5vw,
+    100% 100%,
+    0% calc(100% - 7.5vw)
+  );
+}
+
+.is-style-large {
+  @apply text-2xl font-extrabold;
+}
+
+.is-style-cut-corner-bottom-left {
+  img {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 30% 100%, 0% 70%);
+  }
+
+  &:last-child {
+    &::after {
+      @apply bg-violet-100 bg-violet-slant bg-no-repeat bg-contain bg-left-bottom;
+      z-index: -1;
+      display: block;
+      content: '';
+      height: 80vh;
+      width: 100vw;
+      left: 0;
+      transform: translateY(-60%);
+      position: absolute;
+    }
+  }
+}
+
+.alignfull {
+  img {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+hr,
+.wp-block-separator,
+.prose hr {
+  width: 40%;
+  opacity: 1;
+  @apply border-t-0 border-b-4 border-orange-300;
+
+  &.is-style-wide {
+    width: 100%;
+  }
+}
+
+.prose hr {
+  margin-left: 0 !important;
+}
+
+.prose {
+  ul > li::before {
+    @apply bg-orange-400 #{!important};
+
+    transform: scale(2.5);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  }
+}
