@@ -22,9 +22,7 @@
     "psr-4": {
       "App\\": "app/"
     },
-    "classmap": [
-      "app/CustomControls/index.php"
-    ]
+    "classmap": []
   },
   "require": {
     "php": "^7.3|^8.0",
