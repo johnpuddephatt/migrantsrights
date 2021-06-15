@@ -1,4 +1,9 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap);
+:root{
+	/* added by fgp */
+	--has-fgp: initial;
+	--parent-has-fgp: initial;
+}
 body{
   font-family: Montserrat, ui-sans-serif, system-ui;
 }
@@ -35,26 +40,63 @@ body{
   display: none;
 }
 
+.nav-links > *{
+	/* added by fgp */
+	--parent-has-fgp: !important;
+	--orig-margin-top: initial;
+	pointer-events: var(--parent-has-fgp) auto;
+}
+
+.nav-links > * > *{
+	/* added by fgp */
+	--parent-has-fgp: initial;
+}
+
 .nav-links{
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
+	/* added by fgp */
+	--has-fgp: ;
+	pointer-events: var(--has-fgp) none;
+}
+
+.nav-links{
+	--fgp-margin-top: initial;
+	--orig-margin-top: 2rem;
+	margin-top: var(--fgp-margin-top, var(--orig-margin-top));
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-previous, .nav-next > *{
+	/* added by fgp */
+	--parent-has-fgp: !important;
+	pointer-events: var(--parent-has-fgp) auto;
+}
+
+.nav-previous, .nav-next > * > *{
+	/* added by fgp */
+	--parent-has-fgp: initial;
 }
 
 .nav-previous, .nav-next{
-  display: inline-flex;
-  border-radius: 0.25rem;
-  border-width: 0px;
-  --tw-bg-opacity: 1;
-  background-color: rgba(117, 48, 215, var(--tw-bg-opacity));
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+	/* added by fgp */
+	--has-fgp: ;
+	pointer-events: var(--has-fgp) none;
+}
+
+.nav-previous, .nav-next{
+	display: inline-flex;
+	border-radius: 0.25rem;
+	border-width: 0px;
+	--tw-bg-opacity: 1;
+	background-color: rgba(117, 48, 215, var(--tw-bg-opacity));
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	--tw-text-opacity: 1;
+	color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
 .nav-previous:hover, .nav-next:hover{
@@ -161,8 +203,15 @@ hr.is-style-wide,
   width: 100%;
 }
 
+.prose hr > *{
+	/* added by fgp */
+	--orig-margin-left: initial;
+}
+
 .prose hr {
-  margin-left: 0 !important;
+	--fgp-margin-left: initial;
+	--orig-margin-left: 0px;
+	margin-left: var(--fgp-margin-left, var(--orig-margin-left)) !important;
 }
 
 .prose ul > li::before{
