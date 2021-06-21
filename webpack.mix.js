@@ -19,7 +19,7 @@ mix
   .sass('resources/styles/editor.scss', 'styles')
   .options({
     processCssUrls: false,
-    postCss: [require('tailwindcss'), require('flex-gap-polyfill')],
+    postCss: [require('tailwindcss')],
   });
 
 mix
