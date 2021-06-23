@@ -24,8 +24,8 @@ module.exports = {
         DEFAULT: '1rem',
         sm: '1.5rem',
         lg: '2rem',
-        xl: '3rem',
-        '2xl': '4rem',
+        xl: '2,.5rem',
+        '2xl': '3rem',
       },
     },
     backgroundSize: {

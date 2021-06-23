@@ -107,10 +107,11 @@ body {
 }
 
 .alignfull {
-  img {
-    width: 100%;
-    max-width: none;
-  }
+  width: auto !important;
+  // img {
+  //   width: 100%;
+  //   max-width: none;
+  // }
 }
 
 hr,

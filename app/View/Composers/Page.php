@@ -50,7 +50,8 @@ class Page extends Composer
         return get_posts([
             'post_type'        => 'page',
             'post_parent'    => $post->ID,
-
+            'orderby' => 'menu_order',
+            'order' => 'ASC',
         ]);
     }
 
@@ -61,6 +62,8 @@ class Page extends Composer
         return get_posts([
             'post_type'        => 'page',
             'post_parent'    => $post->post_parent,
+            'orderby' => 'menu_order',
+            'order' => 'ASC',
         ]);
     }
 }
