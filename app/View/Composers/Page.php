@@ -52,6 +52,7 @@ class Page extends Composer
             'post_parent'    => $post->ID,
             'orderby' => 'menu_order',
             'order' => 'ASC',
+            'numberposts' => -1
         ]);
     }
 
@@ -64,6 +65,7 @@ class Page extends Composer
             'post_parent'    => $post->post_parent,
             'orderby' => 'menu_order',
             'order' => 'ASC',
+            'numberposts' => -1
         ]);
     }
 }

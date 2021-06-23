@@ -38,7 +38,8 @@ class archiveProject extends Composer
         return get_posts([
             'orderby' => 'menu_order',
             'order' => 'ASC',
-            'post_type' => 'project'
+            'post_type' => 'project',
+            'numberposts' => -1
         ]);
     }
 }
