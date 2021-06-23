@@ -42,7 +42,7 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
         'description'    => 'Settings relating to the homepage',
     ));
 
-    // Home hero case study
+    // Home hero 
 
     $wp_customize->add_section(
       'home_hero',
@@ -281,6 +281,37 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
     )
     );
 
+    // YouTube
+    $wp_customize->add_setting(
+        'youtube',
+        array(
+          'default' => '',
+          'sanitize_callback' => 'sanitize_text_field',
+          'transport' => 'postMessage'
+        )
+    );
+
+    $wp_customize->selective_refresh->add_partial('youtube', [
+      'selector' => '.social-icon__youtube',
+      'container_inclusive' => false,
+      'fallback_refresh' => false,
+      'render_callback' => function() {
+          echo get_theme_mod('youtube');
+      }
+    ]);
+
+    $wp_customize->get_setting('youtube')->transport = 'postMessage';
+
+    $wp_customize->add_control(
+    'youtube',
+    array(
+      'type' => 'text',
+      'label' => 'YouTube',
+      'section' => 'contact',
+      'settings' => 'youtube',
+    )
+    );
+
     // Instagram
     $wp_customize->add_setting(
         'instagram',
@@ -390,6 +421,71 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
     )
     );
 
+
+    // Home hero 
+
+    $wp_customize->add_section(
+      'home_case_study',
+      array(
+          'title' => 'Case study',
+          'description' => '',
+          'priority' => 25,
+          'panel'=>'home_panel',
+        )
+    );
+
+    $wp_customize->add_setting(
+        'home_case_study_image'
+    );
+
+    $wp_customize->add_control(
+        new \WP_Customize_Media_Control(
+          $wp_customize,
+          'home_case_study_image',
+          array(
+            'label' => 'Image',
+            'section' => 'home_case_study',
+            'settings' => 'home_case_study_image',
+            'transport' => 'postMessage'
+          )
+        )
+    );
+
+    $wp_customize->add_setting(
+        'home_case_study_text',
+        array(          
+          'sanitize_callback' => 'sanitize_textarea_field',
+          'transport' => 'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+    'home_case_study_text',
+    array(
+      'type' => 'textarea',
+      'label' => 'Case study text',
+      'section' => 'home_case_study',
+      'settings' => 'home_case_study_text',
+    )
+    );
+
+    $wp_customize->add_setting(
+        'home_case_study_name',
+        array(          
+          'sanitize_callback' => 'sanitize_text_field',
+          'transport' => 'postMessage'
+        )
+    );
+
+    $wp_customize->add_control(
+    'home_case_study_name',
+    array(
+      'type' => 'text',
+      'label' => 'Case study name',
+      'section' => 'home_case_study',
+      'settings' => 'home_case_study_name',
+    )
+    );
 
 
 

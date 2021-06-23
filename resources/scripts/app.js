@@ -1,10 +1,8 @@
-/**
- * External Dependencies
- */
-
-import 'jquery';
+// import 'jquery';
 import './gap-polyfill';
+import './people-blocks';
+import Alpine from 'alpinejs';
 
-$(document).ready(() => {
-  // console.log('Hello world');
-});
+window.Alpine = Alpine;
+
+Alpine.start();

@@ -13,7 +13,7 @@
   </div>
   @if(count($projects))
   <div class="pb-32 clip-top-slant bg-violet-100">
-    <div class="container max-w-5xl mx-auto">
+    <div class="container max-w-5xl mx-auto md:px-0 2xl:max-w-6xl">
 
       <x-heading level="2" class="mt-8 mb-10 text-5xl text-violet-800">Find out more</x-heading>
       @foreach($projects as $key => $project)

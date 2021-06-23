@@ -138,7 +138,69 @@ hr,
   }
 }
 
-.wp-block-media-text {
+.wp-block-columns {
+  @apply flex gap-4;
+}
+
+.wp-block-person {
+  + .wp-block-person {
+    margin-top: 1em;
+  }
+  @apply border-4 border-violet-200;
+
+  .wp-block-columns {
+    @apply bg-black flex items-center;
+  }
+
+  [data-type='mrn/button'] {
+    position: static;
+  }
+
+  .wp-block-column {
+    position: relative;
+  }
+
+  .block-editor-block-list__block {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .button {
+    position: absolute;
+    transform-origin: center;
+    @apply right-4 top-1/2 transition;
+    transform: translateY(-50%);
+
+    path {
+      stroke-width: 100;
+    }
+
+    &[aria-expanded='true'] {
+      transform: translateY(-50%) rotate(90deg);
+    }
+  }
+
+  h3 {
+    @apply text-4xl font-bold text-white mt-2 mb-1  #{!important};
+  }
+
+  h4 {
+    @apply text-2xl font-bold text-violet-200  #{!important};
+  }
+
+  .person-details {
+    @apply p-4 pl-24;
+  }
+
+  figure {
+    @apply my-0 #{!important};
+
+    figcaption {
+      display: none;
+    }
+  }
+}
+.wp-block .wp-block-media-text {
   display: grid;
   grid-template-columns: 50% 1fr;
 
