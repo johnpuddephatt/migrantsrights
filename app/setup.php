@@ -14,7 +14,7 @@ add_theme_support('soil', [
     'disable-rest-api',
     'disable-asset-versioning',
     'disable-trackbacks',
-    // 'google-analytics' => 'UA-XXXXX-Y',
+    'google-analytics' => 'UA-12833905-1',
     'js-to-footer',
     'nav-walker',
     'nice-search',
