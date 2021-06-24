@@ -15,7 +15,7 @@
 <header class="relative z-20 bg-black body-font">
   <div class="container flex flex-col flex-wrap items-center px-0 py-4 md:flex-row">
     <a href="{{ home_url('/') }}" class="flex items-center mb-4 font-extrabold text-gray-100 title-font md:mb-0">
-      <img class="w-12 h-12 mr-2 " src="{{ $siteLogo }}" />
+      <img alt="" class="w-12 h-12 mr-2 " src="{{ $siteLogo }}" />
       <span class="ml-1 text-xl">{{ $siteName }}</span>
     </a>
     @if(!empty($primaryNavigation))

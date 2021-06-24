@@ -36,7 +36,7 @@
 
 <section class="text-white bg-black clip-top-right-corner">
   <div class="container items-center pt-32 pb-16">
-    <x-heading size="3" class="text-white">Latest news &amp; comment</x-heading>
+    <x-heading size="3" level="2" class="text-white">Latest news &amp; comment</x-heading>
     <div class="grid grid-cols-1 gap-8 mt-6 text-left md:grid-cols-4">
       <a href="{{ get_permalink($posts[0]->ID) }}"
         class="relative z-10 block col-auto bg-black md:-mb-24 md:col-span-2">
@@ -162,7 +162,7 @@ get_theme_mod('home_case_study_name'))
         </div>
       </div>
 
-      <a target="_blank"
+      <a rel="noopener" target="_blank"
         x-bind:href="`http://link.justgiving.com/v1/charity/donate/charityId/231474?isRecurring=${isRecurring}&amount=${amount}&currency=GBP&tipScheme=TipJar2.1&reference=MRN-WEB`"
         class="flex items-center font-extrabold leading-relaxed lowercase text-md md:text-3xl text-violet-800"><span
           class="py-2 border-b border-violet-800">Make your donation</span>
