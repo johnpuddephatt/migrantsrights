@@ -13,7 +13,7 @@ class Page extends Composer
      */
     protected static $views = [
         'partials.page-header',
-        'partials.project-header',
+        'partials.guide-header',
         // 'partials.content',
         'partials.content-page',
 
