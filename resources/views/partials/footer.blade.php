@@ -1,49 +1,49 @@
 <footer>
   <div class="bg-violet-200">
     <div class="container flex flex-col items-center py-6 sm:flex-row">
-      <h3 class="flex-grow py-3 mr-12 text-2xl font-extrabold border-b border-b-2 text-violet-800 border-violet-700">
+      <h3
+        class="flex-grow hidden py-3 mb-3 text-xl font-extrabold border-b-2 md:block lg:mb-0 lg:mr-12 lg:text-2xl text-violet-800 border-violet-700">
         Stay up
         to date with our
         work</h3>
-      <span class="inline-flex items-center justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start">
+      <span class="inline-flex items-center justify-center md:mt-4 sm:ml-auto sm:mt-0 sm:justify-start">
 
         <a target="_blank"
           href="https://migrantsrights.us2.list-manage.com/subscribe/post?u=d9e512af0e78ae1205ef2bef5&id=a6e14e9a98"
-          class="inline-flex px-6 py-2 mr-8 -mb-2 text-xl font-bold border-2 text-violet-800 border-violet-700 hover:text-violet-900 focus:outline-none hover:border-violet-900">Join
+          class="inline-flex px-2 py-2 mr-1 font-bold border-2 md:-mb-2 md:px-6 text-md lg:mr-8 md:text-xl text-violet-800 border-violet-700 hover:text-violet-900 focus:outline-none hover:border-violet-900">Join
           our newsletter</a>
 
         @if(get_theme_mod('facebook'))
-        <a class="ml-3 text-violet-700 hover:text-violet-900" aria-label="Facebook link"
+        <a class="text-violet-700 hover:text-violet-900" aria-label="Facebook link"
           href="{{ get_theme_mod('facebook') }}" target="_blank">
           <x-icon.facebook />
         </a>
         @endif
 
         @if(get_theme_mod('twitter'))
-        <a aria-label="Twitter link" class="ml-4 text-violet-700 hover:text-violet-900"
+        <a aria-label="Twitter link" class="ml-1 md:ml-4 text-violet-700 hover:text-violet-900"
           href="{{ get_theme_mod('twitter') }}" target="_blank">
           <x-icon.twitter />
         </a>
         @endif
 
         @if(get_theme_mod('youtube'))
-        <a aria-label="Youtube link" class="ml-4 text-violet-700 hover:text-violet-900"
+        <a aria-label="Youtube link" class="ml-1 md:ml-4 text-violet-700 hover:text-violet-900"
           href="{{ get_theme_mod('youtube') }}" target="_blank">
           <x-icon.youtube />
         </a>
         @endif
 
         @if(get_theme_mod('instagram'))
-        <a aria-label="Instagram link" class="ml-4 text-violet-700 hover:text-violet-900"
+        <a aria-label="Instagram link" class="ml-1 md:ml-4 text-violet-700 hover:text-violet-900"
           href="{{ get_theme_mod('instagram') }}" target="_blank">
           <x-icon.instagram />
         </a>
         @endif
 
-
         @if(get_theme_mod('linkedin'))
-        <a aria-label="LinkedIn link" class="ml-4 text-gray-300 hover:text-white" href="{{ get_theme_mod('linkedin') }}"
-          target="_blank">
+        <a aria-label="LinkedIn link" class="ml-1 text-gray-300 md:ml-4 hover:text-white"
+          href="{{ get_theme_mod('linkedin') }}" target="_blank">
           <x-icon.linkedin />
         </a>
         @endif

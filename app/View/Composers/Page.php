@@ -12,7 +12,7 @@ class Page extends Composer
      * @var array
      */
     protected static $views = [
-        // 'partials.page-header',
+        'partials.page-header',
         // 'partials.content',
         'partials.content-page',
     ];
@@ -29,6 +29,7 @@ class Page extends Composer
         return [
             'children' => $this->children(),
             'siblings' => $this->siblings(),
+            'parent' => $this->parent(),
         ];
     }
 
@@ -56,10 +57,12 @@ class Page extends Composer
         ]);
     }
 
+
+
     public function siblings() {
         global $post; 
         if (!$post->post_parent ) return null;
-        
+
         return get_posts([
             'post_type'        => 'page',
             'post_parent'    => $post->post_parent,
@@ -67,5 +70,15 @@ class Page extends Composer
             'order' => 'ASC',
             'numberposts' => -1
         ]);
+    }
+
+    public function parent() {
+        global $post; 
+        if (!$post->post_parent || get_post_status($post->post_parent) == 'private') return null;
+
+        $parent = new \stdClass;
+        $parent->title = get_the_title($post->post_parent);
+        $parent->permalink = get_permalink($post->post_parent);
+        return $parent;
     }
 }

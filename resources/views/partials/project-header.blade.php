@@ -12,7 +12,7 @@
         {!! $title !!}
       </h1>
       @if(!empty($post->post_excerpt))
-      <p class="my-8 text-xl font-extrabold leading-snug md:text-2xl 2xl:w-5/6">{!! $post->post_excerpt
+      <p class="max-w-xl my-8 text-xl font-extrabold leading-snug md:text-2xl 2xl:w-5/6">{!! $post->post_excerpt
         !!}</p>
       @endif
     </div>

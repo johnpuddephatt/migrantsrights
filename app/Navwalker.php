@@ -19,7 +19,7 @@ class Navwalker extends \Walker_Nav_Menu {
     }
     function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
-        $output .= "<ul class='absolute right-0 hidden w-64 overflow-hidden text-gray-700 rounded shadow-lg md:group-hover:block'>";
+        $output .= "<ul class='absolute right-0 hidden w-64 overflow-hidden text-gray-700 shadow-lg md:group-hover:block'>";
         // $output .= "\n$indent<ul>\n";
         // $output .= "</div>";
         // $output .= "</dropdown-link>";
@@ -48,7 +48,7 @@ class Navwalker extends \Walker_Nav_Menu {
         $atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
         $atts['href']   = ! empty( $item->url )        ? $item->url        : '';
         if($depth == 0) {
-            $atts['class']  = 'inline-flex py-2 px-1 md:px-2 my-1 mx-2 md:mx-4 border-b-2 border-transparent items-center';
+            $atts['class']  = 'inline-flex py-2 px-1 md:px-2 my-1 mx-2 xl:mx-4 border-b-2 border-transparent items-center';
             $atts['class']  .= isset($this->styles['level-0-link']) ? ' ' . $this->styles['level-0-link'] : '';
         }
         else {

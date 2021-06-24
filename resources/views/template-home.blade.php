@@ -19,6 +19,12 @@
           <x-icon.arrow-right class="w-16 h-16 md:w-32 md:h-32" />
         </a>
 
+        <a href="/know-your-rights"
+          class="flex items-center font-extrabold leading-relaxed lowercase -mt-14 text-md md:text-2xl text-violet-800"><span
+            class="py-2 border-b border-violet-800">Know your rights guide</span>
+          <x-icon.arrow-right class="w-16 h-16 md:w-32 md:h-32" />
+        </a>
+
       </div>
       <div class="relative flex self-stretch flex-grow mb-6 md:mb-0 md:static md:w-1/2">
         {!! $hero_image !!}
@@ -67,7 +73,7 @@
 @if(get_theme_mod('home_case_study_text') && get_theme_mod('home_case_study_image') &&
 get_theme_mod('home_case_study_name'))
 <section class="relative text-white bg-right-top bg-no-repeat bg-violet-100 bg-hexagons">
-  <div class="container pb-24 pt-36 2xl:pt-48">
+  <div class="container pt-48 pb-24 2xl:pt-60">
     <div class="md:w-1/2 2xl:w-2/5">
 
       <p class="relative pl-20 mb-8 text-2xl font-extrabold text-orange">
@@ -76,7 +82,8 @@ get_theme_mod('home_case_study_name'))
       </p>
       <h2 class="relative text-2xl font-extrabold md:text-3xl xl:text-4xl text-violet-800">
         {{ get_theme_mod('home_case_study_text') }}
-        <span class="absolute right-0 font-extrabold text-orange-400 text-9xl -b-24 md:-r-12 md:b-0">”</span>
+        <span
+          class="absolute right-0 font-extrabold text-orange-400 text-9xl -bottom-28 md:-bottom-24 md:-right-12 ">”</span>
       </h2>
 
       <p
@@ -110,7 +117,7 @@ get_theme_mod('home_case_study_name'))
 
 <section x-data="{ amount: '10.00', isRecurring: false }"
   class="relative pt-24 -mt-32 bg-orange-300 bg-left-top bg-no-repeat md:pt-64 md:-mt-64 bg-orange-hexagons">
-  <div class="container flex items-center justify-end pt-48 pb-12">
+  <div class="container flex items-center justify-end pb-24 pt-60">
     <div class="md:w-1/2">
 
 
@@ -124,32 +131,32 @@ get_theme_mod('home_case_study_name'))
       </p>
 
 
-      <div class="mb-3">
-        <div class="inline-flex">
+      <div>
+        <div class="inline-flex mb-3">
           <button x-on:click="amount = 10"
-            x-bind:class="amount == '10.00' ? 'text-white bg-violet-700 rounded-l hover:bg-violet-800' : 'text-gray-800 bg-gray-200 hover:text-white hover:bg-violet-500'"
-            class="px-6 py-3 text-lg font-bold border border-gray-300 rounded-l">
+            x-bind:class="amount == '10.00' ? 'text-white bg-violet-700 hover:bg-violet-800' : 'text-gray-800 bg-white hover:text-white hover:bg-violet-500'"
+            class="px-6 py-3 text-lg font-bold">
             £10
           </button>
           <button x-on:click="amount = '20.00'"
-            x-bind:class="amount == '20.00' ? 'text-white bg-violet-700 rounded-l hover:bg-violet-800' : 'text-gray-800 bg-gray-200 hover:text-white hover:bg-violet-500'"
-            class="px-6 py-3 text-lg font-bold border-t border-b border-gray-300">
+            x-bind:class="amount == '20.00' ? 'text-white bg-violet-700 hover:bg-violet-800' : 'text-gray-800 bg-white hover:text-white hover:bg-violet-500'"
+            class="px-6 py-3 text-lg font-bold">
             £20
           </button>
           <button x-on:click="amount = '50.00'"
-            x-bind:class="amount == '50.00' ? 'text-white bg-violet-700 rounded-l hover:bg-violet-800' : 'text-gray-800 bg-gray-200 hover:text-white hover:bg-violet-500'"
-            class="px-6 py-3 text-lg font-bold border border-gray-300 rounded-r">
+            x-bind:class="amount == '50.00' ? 'text-white bg-violet-700 hover:bg-violet-800' : 'text-gray-800 bg-white hover:text-white hover:bg-violet-500'"
+            class="px-6 py-3 text-lg font-bold">
             £50
           </button>
         </div>
-        <div class="inline-flex pl-2">
+        <div class="inline-flex mb-3 md:pl-2">
           <button x-on:click="isRecurring = false"
-            x-bind:class="isRecurring == false ? 'text-white bg-violet-700 rounded-l hover:bg-violet-800' : 'text-gray-800 bg-gray-200 hover:text-white hover:bg-violet-500'"
-            class="px-6 py-3 text-lg font-bold border-t border-b border-gray-300"> One-off
+            x-bind:class="isRecurring == false ? 'text-white bg-violet-700 hover:bg-violet-800' : 'text-gray-800 bg-white hover:text-white hover:bg-violet-500'"
+            class="px-6 py-3 text-lg font-bold"> One-off
           </button>
           <button x-on:click="isRecurring = true"
-            x-bind:class="isRecurring == true ? 'text-white bg-violet-700 rounded-l hover:bg-violet-800' : 'text-gray-800 bg-gray-200 hover:text-white hover:bg-violet-500'"
-            class="px-6 py-3 text-lg font-bold border-t border-b border-gray-300">
+            x-bind:class="isRecurring == true ? 'text-white bg-violet-700 hover:bg-violet-800' : 'text-gray-800 bg-white hover:text-white hover:bg-violet-500'"
+            class="px-6 py-3 text-lg font-bold">
             Monthly
           </button>
         </div>

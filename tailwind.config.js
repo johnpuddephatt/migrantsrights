@@ -17,6 +17,9 @@ module.exports = {
       body: ['Montserrat', 'ui-sans-serif', 'system-ui'],
       // display: ['"Montserrat Alternates"', 'ui-sans-serif', 'system-ui'],
     },
+    minHeight: {
+      header: '40em',
+    },
     container: {
       center: true,
 
@@ -60,7 +63,7 @@ module.exports = {
           100: '#FDF5EE',
           200: '#F7DBC1',
           300: '#F2C193',
-          400: '#ECA666',
+          400: '#f0c18c',
           500: '#E78C38',
           600: '#D37219',
           700: '#A55A14',
@@ -108,11 +111,10 @@ module.exports = {
       // Create block color palette utility classes that WordPress uses.
       // @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-color-palettes
       colors: {
-        amber: theme('colors.amber.DEFAULT'),
-        primary: theme('colors.primary'),
-        secondary: theme('colors.secondary'),
-        black: theme('colors.black'),
-        white: theme('colors.white'),
+        purple: theme('colors.violet.DEFAULT'),
+        'light-purple': theme('colors.violet.100'),
+        orange: theme('colors.orange.DEFAULT'),
+        'light-orange': theme('colors.orange.400'),
       },
 
       // If set, will pick the color with most contrast as the foreground text
@@ -182,7 +184,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
     // require('tailwindcss-wordpress'), // supposed to add support for alignright etc... doesn't seem to work
-    // require('tailwindcss-gutenberg'),
 
     gutenberg.colors,
     gutenberg.fontSizes,

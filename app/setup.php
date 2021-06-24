@@ -102,8 +102,23 @@ add_action('after_setup_theme', function () {
     add_theme_support('editor-color-palette', [
         [
             'name' => esc_attr__( 'Orange', 'themeLangDomain' ),
-            'slug' => 'amber',
+            'slug' => 'orange',
             'color' => '#E78C38'
+        ],
+        [
+            'name' => esc_attr__( 'Light orange', 'themeLangDomain' ),
+            'slug' => 'light-orange',
+            'color' => '#eac399'
+        ],
+        [
+            'name' => esc_attr__( 'Purple', 'themeLangDomain' ),
+            'slug' => 'purple',
+            'color' => '#2d1458'
+        ],
+        [
+            'name' => esc_attr__( 'Light purple', 'themeLangDomain' ),
+            'slug' => 'light-purple',
+            'color' => '#e5dbf6'
         ]
     ]);
 
