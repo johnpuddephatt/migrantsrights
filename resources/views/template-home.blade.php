@@ -163,6 +163,7 @@ get_theme_mod('home_case_study_name'))
       </div>
 
       <a rel="noopener" target="_blank"
+        href="http://link.justgiving.com/v1/charity/donate/charityId/231474?isRecurring=false&amount=10.00&currency=GBP&tipScheme=TipJar2.1&reference=MRN-WEB"
         x-bind:href="`http://link.justgiving.com/v1/charity/donate/charityId/231474?isRecurring=${isRecurring}&amount=${amount}&currency=GBP&tipScheme=TipJar2.1&reference=MRN-WEB`"
         class="flex items-center font-extrabold leading-relaxed lowercase text-md md:text-3xl text-violet-800"><span
           class="py-2 border-b border-violet-800">Make your donation</span>
