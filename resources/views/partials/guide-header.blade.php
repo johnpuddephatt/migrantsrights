@@ -14,11 +14,10 @@
 
       <div class="flex items-center">
         @if(has_post_thumbnail(isset($post->ID) ? $post->ID : ''))
-        {!! get_the_post_thumbnail(isset($post->ID) ? $post->ID : '', 'square-s', ['class' => "mr-4 p-4 w-24 h-24
-        xl:w-36 xl:h-36
-        bg-white
-        rounded-full"])
-        !!}
+        <div class="w-24 h-24 p-4 mr-4 bg-white rounded-full xl:w-36 xl:h-36">
+          {!! get_the_post_thumbnail(isset($post->ID) ? $post->ID : '', 'square-s', ['class' => ""])
+          !!}
+        </div>
         @endif
         <x-heading size="4"
           :class="strlen($title) < 35 ? 'text-5xl md:text-6xl tracking-tighter 2xl:text-8xl text-white' : 'md:text-5xl tracking-tighter xl:text-6xl text-white'">
