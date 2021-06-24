@@ -20,7 +20,7 @@
         </a>
 
         <a href="/know-your-rights"
-          class="flex items-center font-extrabold leading-relaxed lowercase -mt-14 text-md md:text-2xl text-violet-800"><span
+          class="flex items-center -mt-2 font-extrabold leading-relaxed lowercase md:-mt-14 text-md md:text-2xl text-violet-800"><span
             class="py-2 border-b border-violet-800">Know your rights guide</span>
           <x-icon.arrow-right class="w-16 h-16 md:w-32 md:h-32" />
         </a>
