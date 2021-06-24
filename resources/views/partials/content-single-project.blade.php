@@ -48,7 +48,7 @@
     @if( $posts )
     <div id="project-posts" class="pt-16 mb-12">
       <x-heading size="6">Updates</x-heading>
-      <p class="mt-4 mb-8">The latest updates from {{ the_title() }}</p>
+      <p class="mt-4 mb-8">Our latest articles about {{ the_title() }}</p>
       @foreach($posts as $related_post)
       @include('partials.post-card', ['post_id' => $related_post->ID])
       @endforeach

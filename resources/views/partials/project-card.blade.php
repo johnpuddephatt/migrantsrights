@@ -3,7 +3,8 @@
 
     @if(has_post_thumbnail($project->ID) &&
     App\has_thumbnail_size($project->ID, 'square'))
-    {!! get_the_post_thumbnail($project->ID, 'square', ['class' => "object-cover object-center flex-none sm:w-1/2"]) !!}
+    {!! get_the_post_thumbnail($project->ID, 'square', ['class' => "object-cover object-center flex-none sm:w-1/2",
+    'sizes' => '(max-width: 640px) 95vw, (max-width: 1024px) 50vw, (max-width: 1536px) 512px, 576px']) !!}
     @else
     <x-placeholder class="flex-none object-cover object-center w-1/2" />
     @endif
