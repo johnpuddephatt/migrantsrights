@@ -65,11 +65,11 @@
           @endif
           <p class="mb-4 text-sm">
             @if(get_theme_mod('contact_email'))
-            <a class="site-footer--email contact-email"
+            <a class="block mb-4 site-footer--email contact-email"
               href="mailto:{{ get_theme_mod('contact_email') }}">{{ get_theme_mod('contact_email') }}</a>
             @endif
             @if(get_theme_mod('contact_phone') || get_theme_mod('contact_phone_human'))
-            <a class="pl-6 site-footer--phone contact-phone"
+            <a class="block site-footer--phone contact-phone"
               href="tel:{{ get_theme_mod('contact_phone') ?? get_theme_mod('contact_phone_human') }}">{{ get_theme_mod('contact_phone_human') ?? get_theme_mod('contact_phone') }}</a>
             @endif
           </p>
