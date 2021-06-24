@@ -8,6 +8,13 @@ namespace App;
 
 use function Roots\asset;
 
+add_action( 'wp_head', function() {
+    $description = get_the_excerpt() ? get_the_excerpt() : get_bloginfo('description');
+    ?>
+        <meta name="description" content="<?php echo $description ?>" />
+    <?php
+});
+
 
 add_theme_support('soil', [
     'clean-up',
