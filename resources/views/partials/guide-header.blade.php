@@ -28,7 +28,7 @@
 
       @if(!empty($post->post_excerpt))
       <p
-        class="max-w-xl text-gray-200 text-xl font-extrabold leading-snug tracking-tight md:text-2xl @if(has_post_thumbnail(isset($post->ID) ? $post->ID : '')) ml-28 xl:ml-40 mt-4 @else mt-8 @endif">
+        class="max-w-xl text-gray-200 text-xl font-extrabold leading-snug tracking-tight md:text-2xl @if(has_post_thumbnail(isset($post->ID) ? $post->ID : '')) ml-36 xl:ml-44 mt-4 @else mt-8 @endif">
         {!! $post->post_excerpt
         !!}</p>
       @endif
