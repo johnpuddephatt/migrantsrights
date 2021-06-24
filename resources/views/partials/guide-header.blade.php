@@ -14,9 +14,9 @@
 
       <div class="flex items-center">
         @if(has_post_thumbnail(isset($post->ID) ? $post->ID : ''))
-        <div class="p-4 mr-4 bg-white rounded-full">
-          {!! get_the_post_thumbnail(isset($post->ID) ? $post->ID : '', 'square-s', ['class' => "w-24 h-24 xl:w-36
-          xl:h-36"])
+        <div class="p-6 mr-4 bg-white rounded-full">
+          {!! get_the_post_thumbnail(isset($post->ID) ? $post->ID : '', 'square-s', ['class' => "w-20 h-20 xl:w-28
+          xl:h-28"])
           !!}
         </div>
         @endif
