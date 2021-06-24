@@ -1,9 +1,9 @@
-<div class="relative pt-4 -mb-40 md:pt-8 md:pt-16 text-violet-900">
+<div class="relative pt-4 -mb-44 md:pt-8 md:pt-16 text-violet-900">
   <div class="absolute inset-0 bg-violet-100 clip-bottom-slant"></div>
   <div
-    class="container relative z-10 flex flex-col-reverse items-center gap-4 px-4 mx-auto max-w-7xl min-h-header md:gap-8 md:flex-row">
+    class="container relative z-10 flex flex-col-reverse items-center gap-4 px-4 mx-auto max-w-7xl min-h-header-sm lg:min-h-header md:gap-8 md:flex-row">
 
-    <div class="flex-1 flex-grow max-w-5xl pb-20 md:pb-40 md:my-auto">
+    <div class="max-w-5xl pb-20 my-auto md:flex-1 md:pb-40">
       @if($post->post_type == 'post')
       <div class="mb-4 text-xl font-bold md:text-2xl md:mb-8 text-violet-800">{{ get_the_date() }}</div>
       @endif

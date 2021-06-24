@@ -19,6 +19,7 @@ module.exports = {
     },
     minHeight: {
       header: '40em',
+      'header-sm': '24em',
     },
     container: {
       center: true,
