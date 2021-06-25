@@ -1,11 +1,11 @@
-<div class="relative pt-4 -mb-40 md:pt-8 md:pt-16 text-violet-900">
+<div class="relative pt-12 -mb-40 md:pt-16 text-violet-900">
   <div class="absolute inset-0 bg-gray-950 clip-bottom-slant"></div>
   <div
     class="container relative z-10 flex flex-col-reverse items-center gap-4 px-4 mx-auto max-w-7xl min-h-header-sm lg:min-h-header md:gap-8 md:flex-row">
 
     <div class="max-w-5xl pb-20 md:flex-1 md:pb-40 md:my-auto">
       @if(isset($parent))
-      <a class="inline-flex items-center pb-2 mb-4 text-3xl font-extrabold border-b-4 md:mb-8 text-violet-200 border-violet-300"
+      <a class="inline-flex items-center pb-2 mb-8 text-xl font-extrabold border-b-4 md:text-3xl text-violet-200 border-violet-300"
         href="{{ $parent->permalink}}">{{ $parent->title}}</a>
       @else
       <hr class="mb-4 md:mb-8 border-violet-300">
