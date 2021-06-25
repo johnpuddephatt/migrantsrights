@@ -30,8 +30,9 @@
     @if($siblings)
     <div class="bg-gray-900 clip-top-slant">
         <div class="container max-w-5xl px-4 py-32 mx-auto">
-            <x-heading level="2" size="3" class="pb-16 text-white md:text-6xl ">{{ $parent->title}}</x-heading>
-            <p class="pb-16 -mt-12 text-3xl font-extrabold text-gray-50">More pages in this section</p>
+            <x-heading level="2" size="3" class="md:pb-4 text-violet-100 md:text-6xl ">{{ $parent->title}}
+            </x-heading>
+            <p class="pb-16 text-xl font-extrabold md:text-3xl text-violet-200">More pages in this section</p>
             @foreach($siblings as $page)
             @include('partials.page-card')
             @endforeach

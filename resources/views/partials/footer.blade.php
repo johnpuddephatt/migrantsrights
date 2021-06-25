@@ -10,7 +10,7 @@
 
         <a rel="noopener" target="_blank"
           href="https://migrantsrights.us2.list-manage.com/subscribe/post?u=d9e512af0e78ae1205ef2bef5&id=a6e14e9a98"
-          class="inline-flex px-2 py-2 mr-1 font-bold border-2 md:px-6 text-md lg:mr-8 md:text-xl text-violet-800 border-violet-700 hover:text-violet-900 focus:outline-none hover:border-violet-900">Join
+          class="inline-flex px-2 py-2 mr-1 text-sm font-bold border-2 md:px-6 lg:mr-8 md:text-xl text-violet-800 border-violet-700 hover:text-violet-900 focus:outline-none hover:border-violet-900">Join
           our newsletter</a>
 
         @if(get_theme_mod('facebook'))
