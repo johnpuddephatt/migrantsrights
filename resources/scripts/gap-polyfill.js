@@ -15,7 +15,7 @@
     ) {
       const shadowRoot = element.attachShadow({ mode: 'open' });
       const shadowEcss = shadowRoot.appendChild(d.createElement('style'));
-      // const shadowSlot = shadowRoot.appendChild(d.createElement('slot'));
+      const shadowSlot = shadowRoot.appendChild(d.createElement('slot'));
       const onFrameSkip = () => {
         shadowEcss.textContent = `::slotted(*){margin:calc(${ecss.rowGap}/2) calc(${ecss.columnGap}/2)}slot{display:inherit;flex-direction:inherit;flex-wrap:inherit;margin:calc(${ecss.rowGap}/-2) calc(${ecss.columnGap}/-2);max-height:-webkit-fill-available}`;
         requestAnimationFrame(requestAnimationFrame.bind(null, onFrameSkip));
