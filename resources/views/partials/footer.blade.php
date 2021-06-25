@@ -54,7 +54,8 @@
     <div class="container pt-32 pb-20 ">
       <div class="flex flex-wrap order-first gap-8 text-center md:text-left">
         <div class="flex-shrink w-full mt-3 lg:w-1/6 md:w-1/2">
-          <img alt="Migrants’ Rights Network Logo" class="w-1/2 h-auto mx-auto lg:w-full" src="{{ $siteLogo }}" />
+          <img width="240" height="221" alt="Migrants’ Rights Network Logo" class="w-1/2 h-auto mx-auto lg:w-full"
+            src="{{ $siteLogo }}" />
         </div>
         <div class="flex-shrink w-full mr-auto lg:mt-0 xl:w-1/3 lg:w-1/4">
           <p class="mb-3 text-2xl sm:mt-1">{{ $siteStrapline }}</p>
