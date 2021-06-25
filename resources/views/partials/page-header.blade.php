@@ -3,7 +3,7 @@
   <div
     class="container relative z-10 flex flex-col-reverse items-center gap-4 px-4 mx-auto max-w-7xl min-h-header-sm lg:min-h-header md:gap-8 md:flex-row">
 
-    <div class="max-w-5xl pb-20 my-auto md:flex-1 md:pb-40">
+    <div class="max-w-5xl my-auto pb-28 md:flex-1 md:pb-40">
       @if($post->post_type == 'post')
       <div class="mb-4 text-xl font-bold md:text-2xl md:mb-8 text-violet-800">{{ get_the_date() }}</div>
       @endif

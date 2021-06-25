@@ -1,4 +1,4 @@
-<div class="relative py-6 text-orange-300 md:py-12">
+<div class="relative py-6 pb-16 text-orange-300 md:py-12">
   <div class="absolute inset-0 bg-gray-950 clip-project-header"></div>
   <div class="container relative z-10 grid mx-auto max-w-8xl md:grid-cols-2">
     <div class="mb-8 -mr-4 md:mb-0 md:mr-none">
