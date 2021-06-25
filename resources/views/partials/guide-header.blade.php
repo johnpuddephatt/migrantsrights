@@ -14,8 +14,8 @@
 
       <div class="items-center md:flex">
         @if(has_post_thumbnail(isset($post->ID) ? $post->ID : ''))
-        <div class="w-20 h-20 p-3 mb-4 mr-4 bg-white rounded-full md:p-6 2xl:w-28 2xl:h-28 md:mb-0">
-          {!! get_the_post_thumbnail(isset($post->ID) ? $post->ID : '', 'square-s', ['class' => ""])
+        <div class="w-16 h-16 p-3 mb-4 mr-4 bg-white rounded-full 2xl:p-6 2xl:w-28 2xl:h-28 md:mb-0">
+          {!! get_the_post_thumbnail(isset($post->ID) ? $post->ID : '', 'square-s', ['class' => "w-full"])
           !!}
         </div>
         @endif
@@ -27,7 +27,7 @@
 
       @if(!empty($post->post_excerpt))
       <p
-        class="max-w-xl text-gray-200 text-xl font-extrabold leading-snug tracking-tight md:text-2xl @if(has_post_thumbnail(isset($post->ID) ? $post->ID : '')) md:ml-36 xl:ml-44 mt-4 @else mt-8 @endif">
+        class="max-w-xl text-gray-200 text-xl font-extrabold leading-snug tracking-tight md:text-2xl @if(has_post_thumbnail(isset($post->ID) ? $post->ID : '')) mt-4 @else mt-8 @endif">
         {!! $post->post_excerpt
         !!}</p>
       @endif
