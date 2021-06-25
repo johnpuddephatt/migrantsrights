@@ -38,31 +38,26 @@
   <div class="container items-center pt-32 pb-16">
     <x-heading size="3" level="2" class="text-white">Latest news &amp; comment</x-heading>
     <div class="grid grid-cols-1 gap-8 mt-6 text-left md:grid-cols-4">
-      <a href="{{ get_permalink($posts[0]->ID) }}"
-        class="relative z-10 block col-auto bg-black md:-mb-24 md:col-span-2">
-        {!! get_the_post_thumbnail($posts[0]->ID, '16by9-m', ['class' => "object-cover object-center w-full
-        mb-4 md:mb-8 lg:h-80"]) !!}
-        <div class="md:px-8 md:pb-8">
-          <p class="mb-4 text-xs font-semibold tracking-widest uppercase">
-            {{get_the_date('', $posts[0]->ID) }}
+      @foreach($posts as $key => $post)
+      <a class="block @if($key == 0) relative z-10 col-auto bg-black md:-mb-24 md:col-span-2 @endif"
+        href="{{ get_permalink($post->ID) }}">
+        {!! get_the_post_thumbnail($post->ID, '16by9-m', ['class' =>
+        ($key == 0) ? "object-cover object-center w-full mb-4 md:mb-8 lg:h-80" : "object-cover object-center w-full mb-4
+        md:mb-8 lg:h-48", 'sizes' => ($key == 0) ? "(min-width: 1536px) 704px, (min-width: 1280px) 592px, (min-width:
+        1024px) 464px, (min-width: 768px) 344px, (min-width: 640px) 592px, 100vw" : "(min-width: 1536px) 336px,
+        (min-width: 1280px) 280px, (min-width: 1024px) 216px, (min-width: 768px) 156px, (min-width:
+        640px) 592px, 100vw"
+        ])
+        !!}
+        <div class="@if($key == 0) md:px-8 md:pb-8 @endif">
+          <p class="mb-4 text-xs font-extrabold tracking-widest uppercase">{{get_the_date('', $post->ID) }}
           </p>
-          <h3 class="mx-auto mb-4 text-xl font-extrabold leading-none lg:text-3xl">
-            {{ $posts[0]->post_title }}</h3>
+          <h3
+            class="mx-auto mb-4 text-xl font-extrabold leading-none @if($key == 0) lg:text-3xl @else lg:text-2xl @endif">
+            {{ $post->post_title }}</h3>
           <p class="inline-flex items-center mt-auto font-semibold text-orange-400 lowercase lg:mb-0 hover:text-white"
             title="read more">Read More</p>
         </div>
-      </a>
-      @foreach(array_slice($posts, 1) as $post)
-      <a class="block" href="{{ get_permalink($post->ID) }}">
-        {!! get_the_post_thumbnail($post->ID, '16by9-m', ['class' => " object-cover object-center w-full mb-4 md:mb-8
-        lg:h-48"])
-        !!}
-        <p class="mb-4 text-xs font-extrabold tracking-widest uppercase">{{get_the_date('', $post->ID) }}
-        </p>
-        <h3 class="mx-auto mb-4 text-xl font-extrabold leading-none lg:text-2xl">
-          {{ $post->post_title }}</h3>
-        <p class="inline-flex items-center mt-auto font-semibold text-orange-400 lowercase lg:mb-0 hover:text-white"
-          title="read more">Read More</p>
       </a>
 
       @endforeach
