@@ -2,7 +2,7 @@
   <div class="container max-w-5xl pb-32 mx-auto">
     <div class="flex flex-col gap-8 md:gap-16 lg:flex-row-reverse">
 
-      <div class="w-full max-w-screen-sm pt-8 md:pt-12 lg:w-1/4">
+      <div class="max-w-screen-sm pt-8 md:pt-12 lg:w-1/4">
         <div class="sticky z-10 p-4 mx-auto bg-white b-96 top-16">
           <x-heading level="2" class="mb-4">Jump to</x-heading>
 
@@ -24,7 +24,7 @@
         </div>
       </div>
 
-      <div class="w-full md:mt-12 lg:px-0 lg:w-3/4">
+      <div class="md:mt-12 lg:px-0 lg:w-3/4">
         <div id="project-overview" class="prose xl:prose-lg">
           @php(the_content())
         </div>

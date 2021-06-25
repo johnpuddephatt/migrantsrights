@@ -8,20 +8,20 @@
 <section class="relative mx-auto bg-orange-300 body-font">
   <div class="container">
     <div class="flex flex-col items-center mx-auto md:flex-row">
-      <div class="pt-16 mb-8 md:py-28 2xl:py-48 md:w-1/2 md:pr-12 md:mb-0">
-        <h1 class="mb-4 text-4xl font-extrabold text-violet-700 sm:text-5xl sm:leading-tight l">
+      <div class="pt-16 mb-8 md:py-24 2xl:py-48 md:w-1/2 md:pr-12 md:mb-0">
+        <h1 class="text-4xl font-extrabold text-violet-700 sm:text-5xl sm:leading-tight">
           We believe everyone has the right to live in a society free from oppression and discrimination.
         </h1>
 
         <a href="/about"
-          class="flex items-center font-extrabold leading-relaxed lowercase text-md md:text-2xl text-violet-800"><span
-            class="py-2 border-b border-violet-800">Learn more about our work</span>
+          class="flex items-center font-extrabold leading-relaxed lowercase text-md md:text-2xl text-violet-800">
+          <span class="py-2 border-b border-violet-800">Learn more about our work</span>
           <x-icon.arrow-right class="w-16 h-16 md:w-32 md:h-32" />
         </a>
 
         <a href="/know-your-rights"
-          class="flex items-center -mt-2 font-extrabold leading-relaxed lowercase md:-mt-14 text-md md:text-2xl text-violet-800"><span
-            class="py-2 border-b border-violet-800">Know your rights guide</span>
+          class="flex items-center -mt-2 font-extrabold leading-relaxed lowercase md:-mt-14 text-md md:text-2xl text-violet-800">
+          <span class="py-2 border-b border-violet-800">Know your rights guide</span>
           <x-icon.arrow-right class="w-16 h-16 md:w-32 md:h-32" />
         </a>
 
