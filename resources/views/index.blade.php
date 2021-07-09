@@ -14,7 +14,7 @@
 
   <div class="flex flex-col lg:flex-row lg:space-x-8">
     @if(isset($blogNavigation))
-    <div class="mb-8 lg:mb-0 lg:w-60">
+    <div class="mb-8 overflow-x-auto lg:mb-0 lg:w-60 whitespace-nowrap">
       {!! $blogNavigation !!}
     </div>
     @endif
