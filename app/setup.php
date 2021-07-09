@@ -82,7 +82,6 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('soil', [
         'clean-up',
-        'disable-rest-api',
         'disable-asset-versioning',
         'disable-trackbacks',
         'google-analytics' => [
