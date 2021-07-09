@@ -235,7 +235,7 @@ hr,
 }
 
 .wp-block-file {
-  @apply py-3 flex flex-row items-center text-lg justify-between;
+  @apply py-3 flex flex-row items-center text-lg md:text-xl justify-between;
 
   a {
     @apply no-underline;
