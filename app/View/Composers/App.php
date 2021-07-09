@@ -22,14 +22,12 @@ class App extends Composer
      */
     public function with()
     {
-        $post = get_queried_object();        
-
         return [
             'title' => $this->title(),
             'siteName' => $this->siteName(),
             'siteStrapline' => $this->siteStrapline(),
             'siteLogo' => $this->siteLogo(),
-            'post'     => $post
+            'post'     => is_singular() ? get_queried_object() : null
         ];
     }
 
@@ -56,6 +54,11 @@ class App extends Composer
     public function title()
     {
 
+        if ( is_category() ) {
+            return single_cat_title('', false);
+        }
+        
+
         if ($this->view->name() == 'index') {
             $post = get_queried_object(); 
             return get_the_title(isset($post->ID) ? $post->ID : null);
@@ -68,10 +71,11 @@ class App extends Composer
 
             return __('Latest Posts', 'sage');
         }
-
+    
         if (is_archive()) {
             return post_type_archive_title('', false);
         }
+
 
         if (is_search()) {
             /* translators: %s is replaced with the search query */
