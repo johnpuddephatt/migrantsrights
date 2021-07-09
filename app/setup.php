@@ -16,22 +16,7 @@ add_action( 'wp_head', function() {
 });
 
 
-add_theme_support('soil', [
-    'clean-up',
-    'disable-rest-api',
-    'disable-asset-versioning',
-    'disable-trackbacks',
-    'google-analytics' => [
-        'should_load' => false,
-        'google_analytics_id' => 'UA-12833905-1',
-        'optimize_id' => null,
-        'anonymize_ip',
-    ],
-    'js-to-footer',
-    'nav-walker',
-    'nice-search',
-    'relative-urls'
-]);
+
 
 /**
  * Register the theme assets.
@@ -97,6 +82,16 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('soil', [
         'clean-up',
+        'disable-rest-api',
+        'disable-asset-versioning',
+        'disable-trackbacks',
+        'google-analytics' => [
+            'should_load' => false,
+            'google_analytics_id' => 'UA-12833905-1',
+            'optimize_id' => null,
+            'anonymize_ip',
+        ],
+        'js-to-footer',
         'nav-walker',
         'nice-search',
         'relative-urls'
