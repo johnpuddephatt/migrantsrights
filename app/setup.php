@@ -86,7 +86,7 @@ add_action('after_setup_theme', function () {
         'disable-asset-versioning',
         'disable-trackbacks',
         'google-analytics' => [
-            'should_load' => false,
+            'should_load' => true,
             'google_analytics_id' => 'UA-12833905-1',
             'optimize_id' => null,
             'anonymize_ip',
