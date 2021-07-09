@@ -233,3 +233,19 @@ hr,
     padding: 0 8% 0 8%;
   }
 }
+
+.wp-block-file {
+  @apply py-3 flex flex-row items-center;
+
+  a {
+    @apply no-underline;
+  }
+
+  &__button {
+    @apply inline-flex px-2 py-2 mr-1 text-sm font-bold border-2 md:px-6 lg:mr-8 md:text-xl text-violet-800 border-violet-700 hover:text-violet-900 focus:outline-none hover:border-violet-900;
+  }
+
+  + .wp-block-file {
+    @apply border-t;
+  }
+}
