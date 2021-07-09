@@ -28,7 +28,7 @@ class Blog extends Composer
                 'menu_class' => 'flex flex-row lg:flex-col'
             ], [
                 'active' => 'bg-violet-200 rounded',
-                'level-0-link' => 'block hover:bg-violet-300 rounded'
+                'level-0-link' => 'block hover:bg-violet-300'
             ]),
         ];     
     }
