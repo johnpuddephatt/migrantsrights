@@ -3,7 +3,7 @@
 @section('content')
 @include('partials.page-header')
 
-<div class="container max-w-5xl px-4 py-48 mx-auto">
+<div class="container max-w-6xl px-1 py-48 mx-auto">
   @if (! have_posts())
   <x-alert type="warning">
     {!! __('Sorry, no results were found.', 'sage') !!}
@@ -12,12 +12,22 @@
   {!! get_search_form(false) !!}
   @endif
 
+  <div class="flex flex-col lg:flex-row lg:space-x-8">
+    @if(isset($blogNavigation))
+    <div class="mb-8 lg:mb-0 lg:w-60">
+      {!! $blogNavigation !!}
+    </div>
+    @endif
 
-  @while(have_posts()) @php(the_post())
-  @include('partials.post-card')
-  @endwhile
+    <div>
 
-  {!! get_the_posts_navigation() !!}
+      @while(have_posts()) @php(the_post())
+      @include('partials.post-card')
+      @endwhile
+      {!! get_the_posts_navigation() !!}
+    </div>
+
+  </div>
 </div>
 
 @endsection

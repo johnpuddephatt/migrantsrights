@@ -1,16 +1,17 @@
-@php($has_image = $post && has_post_thumbnail(isset($post->ID) ? $post->ID : '') &&
+@php($has_image = isset($post->ID) && has_post_thumbnail($post->ID) &&
 isset(wp_get_attachment_metadata(get_post_thumbnail_id($post->ID))['sizes']['square']))
 
 <div class="relative pt-4 -mb-44 md:pt-8 md:pt-16 text-violet-900">
   <div class="absolute inset-0 bg-violet-100 clip-bottom-slant"></div>
   <div
     class="container relative z-10 flex flex-col-reverse items-center gap-4 px-4 mx-auto max-w-7xl min-h-header-sm lg:min-h-header md:gap-8 md:flex-row">
-
-    <div class="max-w-5xl my-auto pb-28 md:flex-1 md:pb-40
-    @if(!$has_image) px-8 mx-auto @endif">
+    <div
+      class=" my-auto pb-28 md:flex-1 md:pb-40
+    @if(!$has_image && is_singular()) mx-auto max-w-5xl px-8 @elseif(!$has_image) mx-auto max-w-6xl px-4 @else max-w-5xl @endif">
       @if($post && $post->post_type == 'post')
       <div class="mb-4 text-xl font-bold md:text-2xl md:mb-8 text-violet-800">{{ get_the_date() }}</div>
       @endif
+
 
       @if(isset($parent))
       <a class="inline-flex items-center pb-2 mb-4 text-3xl font-extrabold border-b-4 md:mb-8 text-violet-600 border-violet-500"

@@ -27,7 +27,7 @@ class App extends Composer
             'siteName' => $this->siteName(),
             'siteStrapline' => $this->siteStrapline(),
             'siteLogo' => $this->siteLogo(),
-            'post'     => is_singular() ? get_queried_object() : null
+            'post'     => get_queried_object()
         ];
     }
 

@@ -16,6 +16,7 @@ add_action( 'wp_head', function() {
 });
 
 
+add_filter('acf/settings/show_admin', '__return_false');
 
 
 /**
