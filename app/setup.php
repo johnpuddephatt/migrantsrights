@@ -103,7 +103,9 @@ add_action('after_setup_theme', function () {
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
         'secondary_navigation' => __('Secondary Navigation', 'sage'),
-        'tertiary_navigation' => __('Tertiary Navigation', 'sage')
+        'tertiary_navigation' => __('Tertiary Navigation', 'sage'),
+        'blog_navigation' => __('Blog Navigation', 'sage')
+
     ]);
 
     /**
@@ -380,6 +382,38 @@ acf_add_local_field_group(array(
 ));
 
 endif;
+
+add_action( 'init', function() {
+    // Add new taxonomy, make it hierarchical (like categories)
+    $labels = array(
+        'name'              => _x( 'Areas of work', 'taxonomy general name', 'textdomain' ),
+        'singular_name'     => _x( 'Area of work', 'taxonomy singular name', 'textdomain' ),
+        'search_items'      => __( 'Search areas of work', 'textdomain' ),
+        'all_items'         => __( 'All areas of work', 'textdomain' ),
+        'edit_item'         => __( 'Edit area of work', 'textdomain' ),
+        'update_item'       => __( 'Update area of work', 'textdomain' ),
+        'add_new_item'      => __( 'Add new area of work', 'textdomain' ),
+        'new_item_name'     => __( 'New area of work name', 'textdomain' ),
+        'menu_name'         => __( 'Areas of work', 'textdomain' ),
+    );
+ 
+    $args = array(
+        'hierarchical'      => false,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'show_in_rest'      => true,
+        'public'            => true,
+        'rewrite'           => [
+            'slug' => 'areas-of-work',
+            'with_front' => false
+        ],
+    );
+ 
+    register_taxonomy( 'workareas', array( 'post' ), $args );
+},0);
+
 
 function add_project_box() {
         add_meta_box(

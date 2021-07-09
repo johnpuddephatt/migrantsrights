@@ -57,6 +57,10 @@ class App extends Composer
         if ( is_category() ) {
             return single_cat_title('', false);
         }
+
+        if(is_tax()) {
+            return get_the_archive_title();
+        }
         
 
         if ($this->view->name() == 'index') {

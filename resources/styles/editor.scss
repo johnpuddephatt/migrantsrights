@@ -6,6 +6,10 @@
 
 @import 'common/global';
 
+.edit-post-fullscreen-mode-close_site-icon {
+  border: none !important;
+}
+
 .block-editor-block-list__layout {
   @apply font-body text-lg antialiased #{!important};
 }
