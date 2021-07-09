@@ -68,7 +68,7 @@ class Page extends Composer
         global $post;
         if (!$post ) return null;
 
-        $tag = get_field('post_tag',$post->ID);
+        $tag = get_field('area_of_work',$post->ID);
 
         if($tag) {
            
