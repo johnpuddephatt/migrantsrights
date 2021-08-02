@@ -15,9 +15,12 @@ add_action( 'wp_head', function() {
     <?php
 });
 
-
 add_filter('acf/settings/show_admin', '__return_false');
 
+// Disable post tags
+add_action( 'init', function(){
+    unregister_taxonomy_for_object_type( 'post_tag', 'post' );
+} );
 
 /**
  * Register the theme assets.
