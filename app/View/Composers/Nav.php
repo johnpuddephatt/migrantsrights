@@ -31,7 +31,7 @@ class Nav extends Composer
                 'secondaryNavigation' => $this->navigation('secondary_navigation'),
             ];
         }
-        else {
+        else if($this->view->name() == 'partials.footer') {
             return [
                 'primaryNavigationFooter' => $this->navigation('primary_navigation', [
                     'depth' => 1,

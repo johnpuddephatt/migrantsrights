@@ -17,7 +17,7 @@ class Navwalker extends \Walker_Nav_Menu {
     function filter_builtin_classes( $var ) {
         return ( FALSE === strpos( $var, 'item' ) ) ? $var : '';
     }
-    function start_lvl( &$output, $depth = 0, $args = array() ) {
+    function start_lvl( &$output, $depth = 0, $args = null ) {
         $indent = str_repeat("\t", $depth);
         $output .= "<ul class='absolute right-0 hidden w-64 overflow-hidden text-gray-700 shadow-lg md:group-hover:block'>";
         // $output .= "\n$indent<ul>\n";
@@ -25,7 +25,7 @@ class Navwalker extends \Walker_Nav_Menu {
         // $output .= "</dropdown-link>";
         // $output .= "</div>";
     }
-    function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+    function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
         $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
         $class_names = $value = '';
         $unfiltered_classes = empty( $item->classes ) ? array() : (array) $item->classes;

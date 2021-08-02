@@ -2,7 +2,7 @@
   <div class="bg-violet-200">
     <div class="container flex flex-col items-center py-6 sm:flex-row">
       <h3
-        class="flex-grow hidden py-3 mb-3 text-xl font-extrabold border-b-2 md:block lg:mb-0 lg:mr-12 lg:text-2xl text-violet-800 border-violet-700">
+        class="flex-grow hidden py-3 mb-3 text-xl font-extrabold border-b-2 md:block lg:mb-0 lg:mr-12 lg:text-xl xl:text-2xl text-violet-800 border-violet-700">
         Stay up
         to date with our
         work</h3>
@@ -10,8 +10,13 @@
 
         <a rel="noopener" target="_blank"
           href="https://migrantsrights.us2.list-manage.com/subscribe/post?u=d9e512af0e78ae1205ef2bef5&id=a6e14e9a98"
-          class="inline-flex px-2 py-2 mr-1 text-sm font-bold border-2 md:px-6 lg:mr-8 md:text-xl text-violet-800 border-violet-700 hover:text-violet-900 focus:outline-none hover:border-violet-900">Join
+          class="inline-flex px-2 py-2 mr-1 text-sm font-bold border-2 md:px-6 lg:mr-2 lg:text-xl xl:text-2xl text-violet-800 border-violet-700 hover:text-violet-900 focus:outline-none hover:border-violet-900">Join
           our newsletter</a>
+
+        <a rel="noopener" target="_blank"
+          href="https://us2.campaign-archive.com/home/?u=d9e512af0e78ae1205ef2bef5&id=a6e14e9a98"
+          class="inline-flex py-2 mr-1 text-xs font-normal leading-tight text-center md:px-3 lg:mr-2 text-violet-800 hover:text-violet-900 focus:outline-none">View
+          all past<br> newsletters</a>
 
         @if(get_theme_mod('facebook'))
         <a rel="noopener" class="text-violet-700 hover:text-violet-900" aria-label="Facebook link"

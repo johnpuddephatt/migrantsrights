@@ -90,7 +90,7 @@ class App extends Composer
         }
 
         if (is_404()) {
-            return __('Not Found', 'sage');
+            return __('Sorry, that page could not be found', 'sage');
         }
 
         return get_the_title();

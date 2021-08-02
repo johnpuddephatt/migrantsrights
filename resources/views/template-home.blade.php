@@ -77,8 +77,7 @@ get_theme_mod('home_case_study_name'))
       </p>
       <h2 class="relative text-2xl font-extrabold md:text-3xl xl:text-4xl text-violet-800">
         {{ get_theme_mod('home_case_study_text') }}
-        <span
-          class="absolute right-0 font-extrabold text-orange-400 text-9xl -bottom-28 md:-bottom-24 md:-right-12 ">”</span>
+        <span class="absolute right-0 z-30 font-extrabold text-orange-400 text-9xl -bottom-28 md:-bottom-32">”</span>
       </h2>
 
       <p
