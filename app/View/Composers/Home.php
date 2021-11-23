@@ -25,7 +25,7 @@ class Home extends Composer
                'sizes' => '(orientation: portrait) 100vw, 50vw'
            ]),
             "case_study_image" => wp_get_attachment_image(get_theme_mod('home_case_study_image'), 'square', false, [
-               'class' => 'absolute right-0 w-3/4 md:w-1/2 clip-hexagon md:-bottom-32',
+               'class' => 'absolute right-0 w-3/4 md:w-1/2 clip-hexagon md:-bottom-32 max-w-[900px]',
                'sizes' => '(orientation: portrait) 80vw, 50vw'
            ]),
            "projects" => get_posts([

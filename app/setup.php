@@ -528,51 +528,6 @@ $post_type_object->template = array(
 
 });
 
-
-function my_pre_get_posts( $query ) {
-	
-	// do not modify queries in the admin
-	if( is_admin() ) {
-		return $query;
-	}
-	
-	// only modify queries for 'event' post type
-
-    if(is_home()) {
-        dump('home');
-        die();
-
-    }
-
-	if( isset($query->query_vars['post_type']) && $query->query_vars['post_type'] == 'post' ) {
-		// allow the url to alter the query
-		if( isset($_GET['projects']) ) {
-            // $postID =site_url($_GET['projects']);
-            dump();
-            $post = get_posts( [
-                'posts_per_page' => 1,
-                'post_name__in'  => [$_GET['projects']]
-            ] );
-            dump($post);
-            die();
-            // if($postID) {
-            //     $query->set('meta_key', 'project');
-            //     $query->set('meta_value', $postID);
-            // }
-		
-    	} 
-		
-	}
-	
-	
-	// return
-	return $query;
-
-}
-
-// add_action('pre_get_posts', 'App\my_pre_get_posts');
-
-
 function exclude_single_posts_home($query) {
     
   if (isset($_GET['projects']) && $query->is_home() && $query->is_main_query() && !is_admin()) {
