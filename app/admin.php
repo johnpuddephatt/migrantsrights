@@ -488,7 +488,7 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
     );
 
         $wp_customize->add_setting(
-        'home_project_title',
+        'home_projects_title',
         array(          
           'sanitize_callback' => 'sanitize_text_field',
           'transport' => 'postMessage'
@@ -496,12 +496,12 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
     );
 
     $wp_customize->add_control(
-    'home_project_title',
+    'home_projects_title',
     array(
       'type' => 'text',
       'label' => 'Title',
       'section' => 'home_projects',
-      'settings' => 'home_project_title',
+      'settings' => 'home_projects_title',
     )
     );
 
