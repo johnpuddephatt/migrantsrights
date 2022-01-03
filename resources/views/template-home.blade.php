@@ -97,7 +97,7 @@ get_theme_mod('home_case_study_name'))
     <a href="/projects">
       <x-heading size="5"
         class="inline-flex items-end mb-16 md:items-center md:text-7xl text-violet-700 2xl:-mx-32 md:-mx-16"><span
-          class="py-4 border-b border-violet-700">Issues &amp; campaigns</span>
+          class="py-4 border-b border-violet-700">{{ get_theme_mod('home_projects_title') }}</span>
         <x-icon.arrow-right class="w-20 h-20 md:w-32 md:h-32" />
       </x-heading>
     </a>
