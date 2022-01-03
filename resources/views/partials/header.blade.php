@@ -20,7 +20,7 @@
     </a>
     @if(!empty($primaryNavigation))
     <nav
-      class="flex flex-wrap items-center justify-center text-sm text-white lowercase 2xl:text-lg md:text-base md:ml-auto">
+      class="flex flex-wrap items-center justify-center text-xs text-white lowercase 2xl:text-lg md:text-sm lg:text-base md:ml-auto">
       {!! $primaryNavigation !!}
     </nav>
     @endif
