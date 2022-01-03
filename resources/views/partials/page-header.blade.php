@@ -18,7 +18,7 @@ isset(wp_get_attachment_metadata(get_post_thumbnail_id($post->ID))['sizes']['squ
         href="{{ $parent->permalink}}">{{ $parent->title}}</a>
       @elseif(is_category() || is_tax())
       <a class="inline-flex items-center pb-2 mb-4 text-3xl font-extrabold border-b-4 md:mb-8 text-violet-600 border-violet-500"
-        href="{{ get_permalink( get_option( 'page_for_posts' )) }}">Articles</a>
+        href="{{ get_permalink( get_option( 'page_for_posts' )) }}">News &amp; reports</a>
       @else
       <hr class="mb-4 md:mb-8 border-violet-500">
       @endif
