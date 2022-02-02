@@ -505,6 +505,33 @@ add_action('customize_register', function (WP_Customize_Manager $wp_customize) {
     )
     );
 
+    
+
+
+
+    $wp_customize->add_section(
+      'home_donate',
+      array(
+          'title' => 'Donate',
+          'description' => '',
+          'priority' => 25,
+          'panel'=>'home_panel',
+        )
+    );
+
+    $wp_customize->add_setting(
+        'home_donate_title'
+    );
+
+    $wp_customize->add_control(
+    'home_donate_title',
+    array(
+      'type' => 'text',
+      'label' => 'Title',
+      'section' => 'home_donate',
+      'settings' => 'home_donate_title',
+    )
+    );
 
 
 
@@ -534,6 +561,14 @@ $choices = array_reduce(
                 return $result;
             }
         );
+
+\Kirki::add_field( 'home_donate_description', [
+	'type'        => 'editor',
+	'label'       => 'Description',
+	'section'     => 'home_donate',
+	'priority'    => 10,
+  'settings'    => 'home_donate_description',
+] );
 
 \Kirki::add_field( 'theme_config_id', [
 	'type'        => 'repeater',

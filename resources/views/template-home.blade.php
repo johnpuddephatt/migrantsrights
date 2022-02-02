@@ -116,13 +116,12 @@ get_theme_mod('home_case_study_name'))
 
 
       <h2 class="relative mb-8 text-5xl font-extrabold md:text-7xl text-violet-700">
-        Support us
+        {{ get_theme_mod('home_donate_title') }}
       </h2>
 
-      <p class="mb-12 xl:w-4/6">From making a donation to volunteering your time, there are <a class="underline"
-          href="/about/support-migrants/rights/">lots of
-          ways you can help</a>. Your support is vital to keep us reaching for justice and equality for all migrants.
-      </p>
+      <div class="mb-12 prose xl:w-4/6">
+        {!! get_theme_mod('home_donate_description') !!}
+      </div>
 
 
       <div>
