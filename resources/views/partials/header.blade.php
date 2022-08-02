@@ -1,12 +1,18 @@
-<div class="py-4 text-xs text-center bg-violet-200 md:hidden">
+@if(get_theme_mod('banner_text'))
+
+<div class="bg-violet-200 py-4 text-center text-xs md:hidden">
   <div class="container">
-    Your support is vital for our work.
-    <a class="font-bold underline" href="/donate-migrants-rights/">Donate now</a
-    >.
+    {{ get_theme_mod('banner_text') }} @if(get_theme_mod('banner_link'))
+
+    <a class="font-bold underline" href="{{ get_theme_mod('banner_link') }}"
+      >{{ get_theme_mod('banner_link_text', 'Read more') }}</a
+    >
+
+@endif
   </div>
 </div>
 
-@if(!empty($secondaryNavigation))
+@endif @if(!empty($secondaryNavigation))
 
 
 <header class="text-gray-800 body-font bg-violet-50">
@@ -20,19 +26,19 @@
 
 @endif
 
-<header class="relative z-20 bg-black body-font">
+<header class="body-font relative z-20 bg-black">
   <div
     class="container flex flex-col flex-wrap items-center px-0 py-4 md:flex-row"
   >
     <a
       href="{{ home_url('/') }}"
-      class="flex items-center mb-4 font-extrabold text-gray-100 title-font md:mb-0"
+      class="text-gray-100 title-font mb-4 flex items-center font-extrabold md:mb-0"
     >
       <img
         height="48"
         width="48"
         alt=""
-        class="w-12 h-12 mr-2"
+        class="mr-2 h-12 w-12"
         src="{{ $siteLogo }}"
       />
       <span class="ml-1 text-xl">{{ $siteName }}</span>
@@ -41,7 +47,7 @@
 
 
     <nav
-      class="flex flex-wrap items-center justify-center text-xs text-white lowercase md:ml-auto md:text-sm lg:text-base 2xl:text-lg"
+      class="flex flex-wrap items-center justify-center text-xs lowercase text-white md:ml-auto md:text-sm lg:text-base 2xl:text-lg"
     >
       {!! $primaryNavigation !!}
     </nav>
