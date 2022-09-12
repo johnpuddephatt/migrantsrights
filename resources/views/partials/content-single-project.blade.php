@@ -40,8 +40,8 @@
     </div>
 
     @if(count($children))
-    <div id="project-children" class="pt-16">
-      <x-heading size="6">In this project</x-heading>
+    <div id="project-children" class="pt-16 last:pb-80">
+      <x-heading size="5">In this project</x-heading>
       <ul>
         @foreach($children as $page)
         <li>
