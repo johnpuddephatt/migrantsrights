@@ -17,10 +17,12 @@ class Project extends Composer
         'partials.content-single-project',
     ];
 
-    public function with() {
+    public function with()
+    {
         return [
-           "attachments" => $this->attachments(),
-           "posts" => $this->posts()
+            'attachments' => $this->attachments(),
+            'posts' => $this->posts(),
+            'children' => $this->children(),
         ];
     }
 
@@ -32,25 +34,42 @@ class Project extends Composer
     public function override()
     {
         return [
-            //    "foo" => 'bar',
-        ];
+                //    "foo" => 'bar',
+            ];
     }
 
-    public function attachments() {
-        return new \Attachments( 'project_resources' );
+    public function attachments()
+    {
+        return new \Attachments('project_resources');
     }
 
-    public function posts() {
+    public function posts()
+    {
         return get_posts([
-            'post_type'        => 'post',
+            'post_type' => 'post',
             'numberposts' => 3,
-            'meta_query' => array(
-                array(
+            'meta_query' => [
+                [
                     'key' => 'project',
                     'value' => '"' . get_the_ID() . '"',
-                    'compare' => 'LIKE'
-                )
-            )
+                    'compare' => 'LIKE',
+                ],
+            ],
         ]);
+    }
+
+    public function children()
+    {
+        global $post;
+
+        if ($post) {
+            return get_posts([
+                'post_type' => 'project',
+                'post_parent' => $post->ID,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+                'numberposts' => -1,
+            ]);
+        }
     }
 }

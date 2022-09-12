@@ -371,6 +371,7 @@ function create_project_post_type()
             'singular_name' => __('Project'),
         ],
         'public' => true,
+        'hierarchical' => true,
         'has_archive' => true,
         'rewrite' => [
             'slug' => 'projects',

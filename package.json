@@ -21,6 +21,7 @@
     "translate:js": "wp i18n make-json ./resources/lang --pretty-print"
   },
   "devDependencies": {
+    "@shufo/prettier-plugin-blade": "^1.5.7",
     "@tailwindcss/typography": "^0.4.0",
     "@tinypixelco/laravel-mix-wp-blocks": "^1.1.0",
     "@wordpress/babel-preset-default": "^5.0.1",
@@ -33,6 +34,7 @@
     "eslint-plugin-import": "^2.22.1",
     "laravel-mix": "^6.0.11",
     "postcss": "^8.3.4",
+    "prettier": "^2.7.1",
     "sass": "^1.32.7",
     "sass-loader": "11.0.1",
     "stylelint": "^13.10.0",

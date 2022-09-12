@@ -11,14 +11,13 @@ class archiveProject extends Composer
      *
      * @var array
      */
-    protected static $views = [
-        'archive-project',
-    ];
+    protected static $views = ['archive-project'];
 
-    public function with() {
+    public function with()
+    {
         return [
-           "post" => get_post(55),
-           "projects" => $this->projects()
+            'post' => get_post(55),
+            'projects' => $this->projects(),
         ];
     }
 
@@ -30,16 +29,18 @@ class archiveProject extends Composer
     public function override()
     {
         return [
-            "title" => get_post(55)->post_title,
+            'title' => get_post(55)->post_title,
         ];
     }
 
-    public function projects() {
+    public function projects()
+    {
         return get_posts([
             'orderby' => 'menu_order',
             'order' => 'ASC',
             'post_type' => 'project',
-            'numberposts' => -1
+            'numberposts' => -1,
+            'post_parent' => 0,
         ]);
     }
 }

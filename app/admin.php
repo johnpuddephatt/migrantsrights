@@ -491,7 +491,7 @@ add_action('customize_preview_init', function () {
 ]);
 
 $choices = array_reduce(
-    get_posts('post_type=project&posts_per_page=-1'),
+    get_posts('post_type=project&posts_per_page=-1&post_parent=0'),
     function ($result, $item) {
         $result[$item->ID] = $item->post_title;
         return $result;

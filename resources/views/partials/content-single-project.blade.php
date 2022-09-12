@@ -10,7 +10,13 @@
 
             <p class="mb-4 text-gray-600"><a href="#project-overview">Overview</a></p>
 
+          
             {!! do_shortcode('[toc]') !!}
+
+            @if(count($children))
+            <p class="mb-4 text-gray-600"><a href="#project-children">In this project</a></p>
+            @endif
+
 
             @if($attachments->exist())
             <p class="mb-4 text-gray-600"><a href="#project-resources">Resources</a></p>
@@ -32,6 +38,27 @@
       </div>
 
     </div>
+
+    @if(count($children))
+    <div id="project-children" class="pt-16">
+      <x-heading size="6">In this project</x-heading>
+      <ul>
+        @foreach($children as $page)
+        <li>
+          <a href="{{ get_permalink($page->ID) }}" @php(post_class('flex items-center border-violet-400 body-font border-b-2
+    py-2'))>
+    <x-heading level="2" size="2" class="mb-0 md:text-3xl">
+        {!! get_the_title($page->ID) !!}
+    </x-heading>
+
+    <x-icon.arrow-right class="w-16 h-16 ml-auto md:w-32 md:h-32 text-violet-300" />
+</a>
+        </li>
+        @endforeach
+      </ul>
+    </div>
+    @endif
+
     @if( $attachments->exist())
     <div class="pt-16" id="project-resources">
       <x-heading size="6">Resources</x-heading>
